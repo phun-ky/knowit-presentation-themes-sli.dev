@@ -1,0 +1,66 @@
+:root {
+  --slidev-slide-container-background: #333333;
+  --slidev-controls-foreground: #f1f0ed;
+  --slidev-theme-primary: #333333;
+}
+
+html, body, #app, #page-root{
+  color: var(--slidev-controls-foreground);
+  background-color: var(--slidev-slide-container-background);
+}
+
+.dark #slide-content{
+  color: var(--slidev-controls-foreground);
+  background-color: var(--slidev-slide-container-background);
+}
+
+@font-face {
+  font-family:"ArialforKnowitW03-Regular";
+  src: url("https://phun-ky.net/assets/knowit/fonts/ArialforKnowitW05-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family:"ArialforKnowitW05-Bold";
+  src: url("https://phun-ky.net/assets/knowit/fonts/ArialforKnowitW05-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+h1{
+  font-size: 4.125rem;
+  font-family: "ArialforKnowitW03-Regular",Arial, sans-serif !important;
+  font-weight: normal;
+  font-style: normal;
+  color: #f1f0ed;
+}
+
+h1.bold{
+  font-size: 4.125rem;
+  font-family: "ArialforKnowitW05-Bold",Arial, sans-serif !important;
+  font-weight: normal;
+  font-style: normal;
+  color: #f1f0ed;
+}
+
+
+p{
+  font-family: Arial, sans-serif !important;
+  color: #f1f0ed !important;
+}
+
+
+.slidev-layout.cover,
+.slidev-layout.intro {
+  @apply h-full grid;
+
+  h1 {
+    @apply text-6xl leading-20;
+  }
+
+  h1 + p {
+    @apply -mt-2 opacity-50 mb-4;
+  }
+
+  p + h2, ul + h2, table + h2 {
+    @apply mt-10;
+  }
+}
